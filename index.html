@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Terrain Generation</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 1152px; height: 720px; background: #828080"></canvas>
+    <script src="Build/build-terrain.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/build-terrain.data.gz",
+        frameworkUrl: "Build/build-terrain.framework.js.gz",
+        codeUrl: "Build/build-terrain.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "vlad-john",
+        productName: "Terrain Generation",
+        productVersion: "0.1",
+      });
+    </script>
+  </body>
+</html>
